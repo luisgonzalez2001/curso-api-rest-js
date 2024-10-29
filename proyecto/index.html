@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gatitos aleatorios</title>
+    <link rel="stylesheet" href="./style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <p>Cats app</p>
+        <nav>
+            <ul>
+                <li><a href="">About me</a></li>
+                <li><a href="">GitHub Code</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <span id="error"></span>
+        <section class="random-michis">
+            <h2>Random Cats</h2>
+            <button class="btn-reload" onclick="reload()">Reload</button>
+            <div id="gridContainerRandom" class="grid-container">
+                <!--  -->
+            </div>
+        </section>
+        <section class="favourites-michis">
+            <h2>Favorite Cats</h2>
+            <div id="gridContainerFav" class="grid-container">
+                <!--  -->
+            </div>
+        </section>
+        <section id="uploadingCat" class="upload-michi">
+            <h2>Upload a photo of your own cat</h2>
+            <form id="uploadingForm">
+                <label for="file">Select a photo</label>
+                <input type="file" id="file" name="file" onchange="previewImage()"/>
+                <img id="previewImg" src="./upload-image.png">
+                <button class="btn-upload" onclick="uploadCatPhoto()" type="button">Upload</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
